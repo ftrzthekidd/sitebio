@@ -1,0 +1,140 @@
+body {
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita rolagem caso o vídeo seja maior que a tela */
+    position: relative; /* Necessário para posicionar o vídeo no fundo */
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Garante que o vídeo cubra todo o fundo sem distorcer */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1; /* Coloca os cards acima do vídeo */
+}
+
+.discord-card {
+    background: hsla(0, 0%, 5%, 0.75);
+    border-radius: 20px;
+    height: 500px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.discord-banner {
+    align-items: flex-end;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    opacity: 0.75;
+}
+
+.discord-banner img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.discord-avatar {
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: -50px;
+    width: 100px;
+}
+
+.discord-avatar img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.discord-username {
+    color: #fff;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: -33px;
+}
+
+.discord-username h3 {
+    font-size: 18px;
+    margin-top: -5px;
+}
+
+.discord-username strong {
+    color: #636363;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.another-medias {
+    background: hsla(0, 0%, 5%, 0.75);
+    border: 2px solid hsla(0, 0%, 5%, 0.788);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    top: -12px;
+    width: 220px;
+}
+
+.another-medias svg {
+    fill: #fff;
+    height: 25px;
+    margin: 10px 10px 0;
+    width: 25px;
+}
+
+.another-medias #spotify:hover {
+    fill: #1ed760;
+    cursor: pointer;
+}
+
+.another-medias #instagram:hover {
+    fill: #e1306c;
+    cursor: pointer;
+}
+
+.another-medias #steam:hover {
+    fill: #171a21;
+    cursor: pointer;
+}
+
+.text {
+    background: hsla(0, 0%, 5%, 0.75);
+    border: 2px solid hsla(0, 0%, 5%, 0.788);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+    height: 45px;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 80px;
+    width: 220px;
+}
